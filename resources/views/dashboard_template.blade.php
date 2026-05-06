@@ -8,7 +8,7 @@
             'color' => 'admin',
             'menu' => ['Dashboard', 'Pet Records', 'Reports', 'Announcements', 'Ordinances', 'Users'],
             'cards' => [
-                ['title' => 'Registered Pets', 'value' => '120'],
+                ['title' => 'Registered Pets', 'value' => '190'],
                 ['title' => 'Total Reports', 'value' => '35'],
                 ['title' => 'Announcements', 'value' => '8'],
                 ['title' => 'Users', 'value' => '64']

@@ -2,6 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Auth;
+
+
+Route::prefix('admin')->group(function () {
+    Route::get('/home', [AdminController::class, 'home'])->name('admin.home');
+    Route::get('/records', [AdminController::class, 'records'])->name('records');
+    Route::get('/adoption', [AdminController::class, 'adoption'])->name('adoption');
+    Route::get('/incident-center', [AdminController::class, 'incidentCenter'])->name('incident.center');
+});
+
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/'); // or wherever you want to send users
+})->name('logout');
 
 /* Home page */
 Route::get('/', function () {
